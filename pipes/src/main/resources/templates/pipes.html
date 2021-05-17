@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"></html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Gamestudio</title>
+</head>
+<body>
+    <!--/*@thymesVar id="userController" type="sk.tuke.gamestudio.game.pipes.server.controller.UserController"*/-->
+    <!--/*@thymesVar id="pipesController" type="sk.tuke.gamestudio.game.pipes.server.controller.PipesController"*/-->
+    <!--/*@thymesVar id="scores" type="sk.tuke.gamestudio.game.pipes.entity.Score"*/-->
+    <!--/*@thymesVar id="score" type="sk.tuke.gamestudio.game.pipes.entity.Score"*/-->
+    <!--/*@thymesVar id="comment" type="sk.tuke.gamestudio.game.pipes.entity.Comment"*/-->
+    <!--/*@thymesVar id="rating" type="sk.tuke.gamestudio.game.pipes.entity.Rating"*/-->
+    <!--/*@thymesVar id="avgRating" type="sk.tuke.gamestudio.game.pipes.entity.Rating"*/-->
+    <!--/*@thymesVar id="htmlField" type="sk.tuke.gamestudio.game.pipes.server.controller.PipesController"*/-->
+    <!--/*@thymesVar id="lastComments" type="sk.tuke.gamestudio.game.pipes.server.controller.PipesController"*/-->
+    <!--/*@thymesVar id="isPlayerLogged" type="sk.tuke.gamestudio.game.pipes.server.controller.PipesController"*/-->
+    <!--/*@thymesVar id="loggedUser" type="sk.tuke.gamestudio.game.pipes.server.controller.UserController"*/-->
+
+    <header th:replace="fragments::header"></header>
+
+    <div th:replace="fragments::login-form"></div>
+    <div th:replace="fragments::register-form"></div>
+    
+    <main>
+        <div class="gameContainer" th:utext="${htmlField}">
+        </div>
+
+
+        <div class="stats_container">
+            <div class="statistics" th:if="${@userController.isLogged()}">
+                <div class="rate">
+                    <input type="radio" id="star5" name="rate" value="5" />
+                    <label onclick="window.location.href='/pipes/rating?rate=5'" for="star5" title="Rating: 5">5 stars</label>
+                    <input type="radio" id="star4" name="rate" value="4" />
+                    <label onclick="window.location.href='/pipes/rating?rate=4'" for="star4" title="Rating: 4">4 stars</label>
+                    <input type="radio" id="star3" name="rate" value="3" />
+                    <label onclick="window.location.href='/pipes/rating?rate=3'" for="star3" title="Rating: 3">3 stars</label>
+                    <input type="radio" id="star2" name="rate" value="2" />
+                    <label onclick="window.location.href='/pipes/rating?rate=2'" for="star2" title="Rating: 2">2 stars</label>
+                    <input type="radio" id="star1" name="rate" value="1" />
+                    <label onclick="window.location.href='/pipes/rating?rate=1'" for="star1" title="Rating: 1">1 star</label>
+                </div>
+                <form action="/pipes/comment" method="post"  class="flex-form">
+                    <input type="text" name="comment" placeholder="Write a comment" required>
+                    <input type="submit" value="Add Comment">
+                </form>
+            </div>
+            <div class="tables">
+                <div class="table-wrapper">
+                    <table class="fl-table fl-table1">
+                        <thead >
+                            <tr>
+                                <th class="table-header" colspan="2">Top Scores</th>
+                            </tr>
+                        </thead>
+                        <thead>
+                        <tr>
+                            <th class="first-row">Player</th>
+                            <th  class="second-row">Score</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="score: ${scores}">
+                            <td th:text="${score.player}">Content 1</td>
+                            <td th:text="${score.points}">Content 1</td>
+                        </tr>
+                        <tbody>
+                    </table>
+                </div>
+                <div class="table-wrapper">
+                    <table class="fl-table fl-table2">
+                        <thead class="table-header">
+                        <tr>
+                            <th colspan="2">Last Comments</th>
+                        </tr>
+                        </thead>
+                        <thead>
+                        <tr>
+                            <th class="first-row">Player</th>
+                            <th class="second-row">Comment</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr th:each="comment: ${lastComments}">
+                            <td th:text="${comment.player}"></td>
+                            <td th:text="${comment.comment}"></td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+    </main>
+</body>
+</html>

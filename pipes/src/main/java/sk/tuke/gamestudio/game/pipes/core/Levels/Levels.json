@@ -1,0 +1,535 @@
+{
+
+  "Levels": {
+      "levelsCount": 5
+    },
+
+  "levels": {
+
+    "1" : {
+      "startEnd": [0, 2],
+      "pipesCount" : 5,
+      "pipesCountToWin" : 5,
+      "moves" : 13,
+      "rowCount": 3,
+      "columnCount": 5,
+      "pipes" : {
+        "1" : {
+          "row" : 0,
+          "column" : 1,
+          "isNeededToWin" : true,
+          "tileGroup" : "rightAngledPipe",
+          "tileDirection" : {
+              "expectedCount": 3,
+              "expected": "SOUTHWEST",
+              "initial": "NORTHEAST"
+            }
+        },
+
+        "2" : {
+          "row" : 1,
+          "column" : 1,
+          "isNeededToWin" : true,
+          "tileGroup" : "rightAngledPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "NORTHEAST",
+            "initial" : "NORTHWEST"
+          }
+        },
+
+        "3" : {
+          "row" : 1,
+          "column" : 2,
+          "isNeededToWin" : true,
+          "tileGroup" : "straightPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected": "EASTWEST",
+            "initial" : "NORTHSOUTH"
+          }
+        },
+
+        "4" : {
+          "row" : 1,
+          "column" : 3,
+          "isNeededToWin" : true,
+          "tileGroup" : "rightAngledPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "SOUTHWEST",
+            "initial" : "SOUTHEAST"
+          }
+        },
+
+        "5" : {
+          "row" : 2,
+          "column" : 3,
+          "isNeededToWin" : true,
+          "tileGroup" : "triplePipe",
+          "tileDirection" : {
+            "expectedCount": 2,
+            "expected" : "WESTNORTHEAST",
+            "alternativeExpected" : "NORTHEASTSOUTH",
+            "initial" : "NORTHEASTSOUTH"
+          }
+        }
+      }
+    },
+
+
+
+
+    "2" : {
+      "startEnd": [0, 1],
+      "pipesCount" : 4,
+      "pipesCountToWin" : 4,
+      "moves" : 8,
+      "rowCount": 3,
+      "columnCount": 5,
+      "pipes" : {
+        "1" : {
+          "row" : 0,
+          "column" : 1,
+          "isNeededToWin" : true,
+          "tileGroup" : "straightPipe",
+          "tileDirection" : {
+              "expectedCount": 1,
+              "expected": "EASTWEST",
+              "initial": "NORTHSOUTH"
+            }
+        },
+
+        "2" : {
+          "row" : 0,
+          "column" : 2,
+          "isNeededToWin" : true,
+          "tileGroup" : "rightAngledPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "SOUTHWEST",
+            "initial" : "NORTHEAST"
+          }
+        },
+
+        "3" : {
+          "row" : 1,
+          "column" : 2,
+          "isNeededToWin" : true,
+          "tileGroup" : "rightAngledPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "NORTHEAST",
+            "initial" : "SOUTHWEST"
+          }
+        },
+
+        "4" : {
+          "row" : 1,
+          "column" : 3,
+          "isNeededToWin" : true,
+          "tileGroup" : "straightPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "EASTWEST",
+            "initial" : "NORTHSOUTH"
+          }
+        }
+      }
+    },
+
+    "3" : {
+      "startEnd": [0, 1],
+      "pipesCount" : 4,
+      "pipesCountToWin" : 4,
+      "moves" : 8,
+      "rowCount": 3,
+      "columnCount": 5,
+      "pipes" : {
+        "1" : {
+          "row" : 0,
+          "column" : 1,
+          "isNeededToWin" : true,
+          "tileGroup" : "rightAngledPipe",
+          "tileDirection" : {
+              "expectedCount": 1,
+              "expected": "SOUTHWEST",
+              "initial": "NORTHEAST"
+            }
+        },
+
+        "2" : {
+          "row" : 1,
+          "column" : 1,
+          "isNeededToWin" : true,
+          "tileGroup" : "rightAngledPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "NORTHEAST",
+            "initial" : "SOUTHWEST"
+          }
+        },
+
+        "3" : {
+          "row" : 1,
+          "column" : 2,
+          "isNeededToWin" : true,
+          "tileGroup" : "straightPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "EASTWEST",
+            "initial" : "NORTHSOUTH"
+          }
+        },
+
+        "4" : {
+          "row" : 1,
+          "column" : 3,
+          "isNeededToWin" : true,
+          "tileGroup" : "straightPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "EASTWEST",
+            "initial" : "NORTHSOUTH"
+          }
+        }
+      }
+    },
+
+    "4" : {
+      "startEnd": [1, 1],
+      "pipesCount" : 12,
+      "pipesCountToWin" : 6,
+      "moves" : 13,
+      "rowCount": 4,
+      "columnCount": 6,
+      "pipes" : {
+        "1" : {
+          "row" : 1,
+          "column" : 1,
+          "isNeededToWin" : true,
+          "tileGroup" : "straightPipe",
+          "tileDirection" : {
+              "expectedCount": 1,
+              "expected": "EASTWEST",
+              "initial": "NORTHSOUTH"
+            }
+        },
+
+        "2" : {
+          "row" : 2,
+          "column" : 1,
+          "isNeededToWin" : false,
+          "tileGroup" : "rightAngledPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "SOUTHWEST",
+            "initial" : "SOUTHEAST"
+          }
+        },
+
+        "3" : {
+          "row" : 0,
+          "column" : 2,
+          "isNeededToWin" : false,
+          "tileGroup" : "triplePipe",
+          "tileDirection" : {
+            "expectedCount": 2,
+            "expected" : "WESTNORTHEAST",
+            "alternativeExpected" : "WESTNORTHEAST",
+            "initial" : "WESTNORTHEAST"
+          }
+        },
+
+        "4" : {
+          "row" : 1,
+          "column" : 2,
+          "isNeededToWin" : true,
+          "tileGroup" : "rightAngledPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "SOUTHWEST",
+            "initial" : "SOUTHEAST"
+          }
+        },
+
+        "5" : {
+          "row" : 2,
+          "column" : 2,
+          "isNeededToWin" : true,
+          "tileGroup" : "rightAngledPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "NORTHEAST",
+            "initial" : "SOUTHWEST"
+          }
+        },
+
+        "6" : {
+          "row" : 3,
+          "column" : 2,
+          "isNeededToWin" : false,
+          "tileGroup" : "rightAngledPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "NORTHEAST",
+            "initial" : "NORTHEAST"
+          }
+        },
+
+        "7" : {
+          "row" : 0,
+          "column" : 3,
+          "isNeededToWin" : false,
+          "tileGroup" : "straightPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "EASTWEST",
+            "initial" : "NORTHSOUTH"
+          }
+        },
+
+        "8" : {
+          "row" : 1,
+          "column" : 3,
+          "isNeededToWin" : false,
+          "tileGroup" : "rightAngledPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "SOUTHWEST",
+            "initial" : "SOUTHWEST"
+          }
+        },
+
+        "9" : {
+          "row" : 2,
+          "column" : 3,
+          "isNeededToWin" : true,
+          "tileGroup" : "straightPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "EASTWEST",
+            "initial" : "NORTHSOUTH"
+          }
+        },
+
+        "10" : {
+          "row" : 3,
+          "column" : 3,
+          "isNeededToWin" : false,
+          "tileGroup" : "straightPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "EASTWEST",
+            "initial" : "NORTHSOUTH"
+          }
+        },
+
+        "11" : {
+          "row" : 1,
+          "column" : 4,
+          "isNeededToWin" : true,
+          "tileGroup" : "rightAngledPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "SOUTHEAST",
+            "initial" : "SOUTHWEST"
+          }
+        },
+
+        "12" : {
+          "row" : 2,
+          "column" : 4,
+          "isNeededToWin" : true,
+          "tileGroup" : "triplePipe",
+          "tileDirection" : {
+            "expectedCount": 2,
+            "expected" : "WESTNORTHEAST",
+            "alternativeExpected" : "SOUTHWESTNORTH",
+            "initial" : "NORTHEASTSOUTH"
+          }
+        }
+      }
+    },
+
+    "5" : {
+      "startEnd": [1, 1],
+      "pipesCount" : 14,
+      "pipesCountToWin" : 6,
+      "moves" : 13,
+      "rowCount": 4,
+      "columnCount": 6,
+      "pipes" : {
+        "1" : {
+          "row" : 0,
+          "column" : 1,
+          "isNeededToWin" : false,
+          "tileGroup" : "rightAngledPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected": "SOUTHWEST",
+            "initial": "SOUTHWEST"
+          }
+        },
+
+        "2" : {
+          "row" : 1,
+          "column" : 1,
+          "isNeededToWin" : true,
+          "tileGroup" : "triplePipe",
+          "tileDirection" : {
+            "expectedCount": 2,
+            "expected" : "EASTSOUTHWEST",
+            "alternativeExpected" : "SOUTHWESTNORTH",
+            "initial" : "NORTHEASTSOUTH"
+          }
+        },
+
+        "3" : {
+          "row" : 2,
+          "column" : 1,
+          "isNeededToWin" : true,
+          "tileGroup" : "rightAngledPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "NORTHEAST",
+            "initial" : "SOUTHEAST"
+          }
+        },
+
+        "4" : {
+          "row" : 3,
+          "column" : 1,
+          "isNeededToWin" : false,
+          "tileGroup" : "rightAngledPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "NORTHEAST",
+            "initial" : "NORTHEAST"
+          }
+        },
+
+        "5" : {
+          "row" : 1,
+          "column" : 2,
+          "isNeededToWin" : false,
+          "tileGroup" : "rightAngledPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "NORTHWEST",
+            "initial" : "NORTHWEST"
+          }
+        },
+
+        "6" : {
+          "row" : 2,
+          "column" : 2,
+          "isNeededToWin" : true,
+          "tileGroup" : "straightPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "EASTWEST",
+            "initial" : "NORTHSOUTH"
+          }
+        },
+
+        "7" : {
+          "row" : 3,
+          "column" : 2,
+          "isNeededToWin" : false,
+          "tileGroup" : "straightPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "EASTWEST",
+            "initial" : "NORTHSOUTH"
+          }
+        },
+
+        "8" : {
+          "row" : 1,
+          "column" : 3,
+          "isNeededToWin" : true,
+          "tileGroup" : "rightAngledPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "SOUTHEAST",
+            "initial" : "SOUTHWEST"
+          }
+        },
+
+        "9" : {
+          "row" : 2,
+          "column" : 3,
+          "isNeededToWin" : true,
+          "tileGroup" : "rightAngledPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "NORTHWEST",
+            "initial" : "SOUTHWEST"
+          }
+        },
+
+        "10" : {
+          "row" : 3,
+          "column" : 3,
+          "isNeededToWin" : false,
+          "tileGroup" : "straightPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "EASTWEST",
+            "initial" : "NORTHSOUTH"
+          }
+        },
+
+        "11" : {
+          "row" : 0,
+          "column" : 4,
+          "isNeededToWin" : false,
+          "tileGroup" : "rightAngledPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "SOUTHEAST",
+            "initial" : "SOUTHWEST"
+          }
+        },
+
+        "12" : {
+          "row" : 1,
+          "column" : 4,
+          "isNeededToWin" : true,
+          "tileGroup" : "triplePipe",
+          "tileDirection" : {
+            "expectedCount": 2,
+            "expected" : "WESTNORTHEAST",
+            "alternativeExpected" : "EASTSOUTHWEST",
+            "initial" : "SOUTHWESTNORTH"
+          }
+        },
+
+        "13" : {
+          "row" : 2,
+          "column" : 4,
+          "isNeededToWin" : false,
+          "tileGroup" : "rightAngledPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "NORTHEAST",
+            "initial" : "NORTHEAST"
+          }
+        },
+
+        "14" : {
+          "row" : 3,
+          "column" : 4,
+          "isNeededToWin" : false,
+          "tileGroup" : "rightAngledPipe",
+          "tileDirection" : {
+            "expectedCount": 1,
+            "expected" : "NORTHWEST",
+            "initial" : "NORTHWEST"
+          }
+        }
+      }
+    }
+  }
+}

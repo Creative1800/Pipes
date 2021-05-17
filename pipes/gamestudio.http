@@ -1,0 +1,53 @@
+
+# Post/Get Score
+POST http://localhost:8080/api/score
+Content-Type: application/json
+
+{
+  "game": "pipes",
+  "player": "brano",
+  "points": 85,
+  "playedOn": "2019-03-22T12:40:33"
+}
+
+###
+GET http://localhost:8080/api/score/pipes
+Accept: application/json
+
+### Post/Get rating
+POST http://localhost:8080/api/rating
+Content-Type: application/json
+
+{
+  "game": "Pipes",
+  "player": "Brano",
+  "rating": 5,
+  "ratedOn": "2021-03-22T12:40:33"
+}
+
+###
+GET http://localhost:8080/api/rating/avg/Pipes
+Accept: application/json
+
+###
+GET http://localhost:8080/api/rating/Pipes/Brano
+Accept: application/json
+
+
+### Post/get comment
+POST http://localhost:8080/api/comment
+Content-Type: application/json
+
+{
+  "game": "pipes",
+  "player": "Kristian",
+  "comment": "I'm the best!",
+  "commentedOn": "2021-03-22T12:40:33"
+}
+
+###
+GET http://localhost:8080/api/comment/Pipes
+Accept: application/json
+
+###
+

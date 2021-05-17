@@ -1,0 +1,118 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org"></html>
+<html lang="en">
+    <!--/*@thymesVar id="userController" type="sk.tuke.gamestudio.game.pipes.server.controller.UserController"*/-->
+    <!--/*@thymesVar id="pipesController" type="sk.tuke.gamestudio.game.pipes.server.controller.PipesController"*/-->
+    <!--/*@thymesVar id="scores" type="sk.tuke.gamestudio.game.pipes.entity.Score"*/-->
+
+    <header th:fragment="header">
+        <div class="headerDiv">
+            <div>
+                <h1 ><a class="headerH1" href="/pipes/homep">GameStudio</a></h1>
+            </div>
+            <div class="login_or_register" th:if="not ${@userController.logged}">
+                <label for="show" class="show-btn show-btn1">
+                    <h1>Login</h1>
+                </label>
+                <h1 class="headerH1">or</h1>
+                <label for="show-register" class="show-btn show-btn2">
+                    <h1>Register</h1>
+                </label>
+            </div>
+            <div class="login_or_register" th:if="${@userController.logged}">
+
+                <h1 class="loggedUser" th:text="${@userController.loggedUser}"></h1>
+                <div class="logoutWindow">
+                    <h1 onclick="document.getElementById('id01').style.display='block'"><img class="logOutImg" th:src="@{images/log-out.png}" alt="close"></h1>
+                    <div id="id01" class="logout-form">
+                        <div class="logout-h3">
+                            <h3>Log out?</h3>
+                        </div>
+                        <div class="logout-btns">
+                            <div class="logout-button">
+                                <form  action="/logout">
+                                    <button class="logout-btn logout-btnYes" type="submit">Yes</button>
+                                </form>
+                            </div>
+                            <div class="logout-button">
+                                <button class="logout-btn logout-btnNo" onclick="document.getElementById('id01').style.display='none'">No</button>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+
+
+        <div th:if="not ${@userController.logged}" th:fragment="login-form" class="center">
+            <input type="checkbox" id="show">
+            <div class="container container-1">
+                <label for="show" class="close-btn">
+                   <img class="close-img" th:src="@{/images/close-btn.png}" alt="close">
+                </label>
+
+                <div class="text">Login</div>
+                <form action="/login" method="post">
+                    <div class="data">
+                        <label>Login</label>
+                        <input type="text" name="login" required>
+                    </div>
+                    <div class="data">
+                        <label >Password</label>
+                        <input type="password" name="password" required>
+                    </div>
+                    <div class="btn">
+                        <div class="inner"></div>
+                        <button type="submit">log in</button>
+                    </div>
+                    <div class="signup-link">
+                        Not registered yet? <a href="#">
+                        <label for="show-register"
+                               class="show-btn"
+                               onclick="document.getElementById('show').checked = false">
+                            Register
+                        </label>
+                    </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div th:if="not ${@userController.logged}" th:fragment="register-form" class="center">
+            <input type="checkbox" id="show-register">
+            <div class="container container-2">
+                <label for="show-register" class="close-btn">
+                    <img class="close-img" th:src="@{/images/close-btn.png}" alt="close">
+                </label>
+                <div class="text">Sign In</div>
+                <form action="/register" method="post">
+                    <div class="data">
+                        <label>Login</label>
+                        <input type="text" name="login" required>
+                    </div>
+                    <div class="data">
+                        <label >Password</label>
+                        <input type="password" name="password" required>
+                    </div>
+                    <div class="btn">
+                        <div class="inner"></div>
+                        <button type="submit">Sign In</button>
+                    </div>
+                    <div class="signup-link">
+                        Already registered?
+                        <a href="#">
+                            <label for="show"
+                                   class="show-btn"
+                                   onclick="document.getElementById('show-register').checked = false">
+                                Log In
+                            </label>
+                        </a>
+                    </div>
+                </form>
+            </div>
+        </div>
+</html>

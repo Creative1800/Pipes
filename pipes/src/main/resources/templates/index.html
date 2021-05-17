@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Gamestudio</title>
+
+</head>
+<body>
+    <div th:replace="fragments::header"></div>
+    <!--<div th:replace="fragments::welcome" ></div>
+    <div th:replace="fragments::logout"></div>
+    <div th:replace="fragments::logged-as"></div>
+    <div th:replace="fragments::login-or-register"></div>-->
+    <div th:replace="fragments::login-form"></div>
+    <div th:replace="fragments::register-form"></div>
+
+    <div class="games">
+        <a href="/pipes">
+        <img class="gamePic" th:src="@{/images/PipesGame.png}" alt="PipesGame">
+        </a>
+
+        <a href="http://localhost:63342/pipes/templates/snake.html">
+            <img class="gamePic" th:src="@{/images/Snakegame.png}" alt="SnakeGame">
+        </a>
+    </div>
+
+
+
+</body>
+</html>
